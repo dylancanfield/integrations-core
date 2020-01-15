@@ -37,7 +37,7 @@ class Apache(AgentCheck):
         'connect_timeout': {'name': 'connect_timeout', 'default': 5},
     }
 
-    VERSION_REGEX = re.compile(r'^Apache/([0-9]+\.[0-9]+\.[0-9]+)( \(.*\))?$')
+    VERSION_REGEX = re.compile(r'^Apache/([0-9]+\.[0-9]+\.[0-9]+)( \(.*\))?( .*)*$')
 
     def __init__(self, name, init_config, instances):
         super(Apache, self).__init__(name, init_config, instances)
